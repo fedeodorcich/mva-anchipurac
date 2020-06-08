@@ -6,6 +6,11 @@ html{
 	width: 100%;
 	height: 100%;
 }
+
+.row{
+	padding: 0; margin: 0;
+}
+
 .bar-left{
 	background-color: #6699CD;
 	display: block;
@@ -19,4 +24,26 @@ html{
 .bordered{
 	border: 1px solid #707070;
 	display: block;
+}
+
+ul li{
+	list-style: none;
+}
+
+ul li a{
+	font-size: 0.75em;
+}
+
+.first-frame , .second-frame , .third-frame{
+	
+}
+
+.second-frame{
+	padding: 0;
+}
+
+.bottom{
+	margin:20px;
+	padding: 0.8em;
+	height: 159px;
 }
