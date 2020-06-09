@@ -1,3 +1,3 @@
 <?php 
-	$conexion=neq mysqli('localhost','root','','mva');
+	$conexion=new mysqli('localhost','root','','mva');
  ?>

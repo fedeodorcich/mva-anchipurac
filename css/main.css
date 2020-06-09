@@ -19,6 +19,7 @@ html{
 	position:absolute;
 	left: 0;
 	top: 0;
+	z-index: 2000;
 }
 
 .bordered{
@@ -52,4 +53,31 @@ ul li a{
 	padding: 0.8em;
 	height: 159px;
 	width: 640.5px;
+}
+
+.colorful{
+	/*background-color:green;*/
+}
+
+.fino{
+	background-color: #6699CD;
+	width: 20px;
+}
+.carousel-control-prev{
+	left: 4%;
+}
+.carousel-control-next{
+	right: 14%;
+}
+
+.carousel{
+	margin-left: 5%;
+}
+
+.element{
+	
+}
+
+@media (max-width: ) {
+	
 }
