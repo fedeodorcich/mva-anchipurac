@@ -15,60 +15,64 @@
 
 <img src="img/mva-logo.png" class="col-md-4 img-fluid" style="margin: 70px 0 30px 0;">
 
-<div class="col-md-12 row container" style="padding: 0 5em;">
-	<!--Imagen grande-->
 
-	<div class="col-md-4">
-		<img src="img/prueba.png" class="img-fluid">
-	</div>
-	
-	<!--Contenedor de elementos laterales derecho-->
 
-	<div class="col-md-8">
-		<!--Contenedor de elemntos laterales superior-->
 
-		<div class="row justify-content-md-center">
 
-			<!--Primer Cuadro-->
 
-			<div class="col-md-3 bordered first-frame">
-				<strong>Otras Obras</strong>
-				<ul>
-					<li><a href="">Obra 1</a></li>
-					<li><a href="">Obra 2</a></li>
-					<li><a href="">Obra 3</a></li>
-				</ul>
-			</div>
 
-			<!--Segundo Cuadro-->
 
-			<div class="col-md-3 bordered second-frame">
-				<img class="img-fluid" src="img/prueba.png"></img>
-			</div>
-			
-			<!--Tercer Cuadro-->
 
-			<div class="col-md-3 bordered third-frame">
-				<strong>Destacados</strong>
-				<ul>
-					<li><a href="">1° Puesto nombre</a></li>
-					<li><a href="">2° Puesto nombre</a></li>
-				</ul>
-			</div>
-		</div>
 
-		<!--Contenedor de elemntos laterales inferior-->
-
-		<div class="col-md-10 bordered bottom">
-			<strong>Biografía / Memoria Conceptual</strong>
-			<p style="margin-top: 20px; height: 100%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam totam quo molestias ex cum voluptatum impedit aliquid exercitationem temporibus, provident earum, distinctio illum nisi, doloremque recusandae atque minima eos officiis a fugit placeat deserunt. Suscipit atque similique hic reiciendis iste.</p>
-		</div>
-
-	</div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <!--img src="" class="d-block w-100" alt="..."-->
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
 
 
+
+
+
+
+
+
+
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$.ajax({
+			url: 'ajax/ajax.php',
+			type: '',
+			dataType: '',
+			data: '',
+			success:function(data){
+				$(".carousel-inner").append(data);
+			},
+			error:function(data){
+				console.log("error");
+			}
+		});
+	});
+	
+	
+</script>
 </body>
 </html>
