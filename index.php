@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Muestra Virtual Anchipurac</title>
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
@@ -13,9 +14,7 @@
 </div>
 <!--Fin de Barra latreral izquierda-->
 
-<img src="img/mva-logo.png" class="col-md-4 img-fluid" style="margin: 30px 0 30px 0;">
-
-
+<img src="img/mva-logo.png" class="col-md-4 img-fluid animate__animated animate__backInLeft logo">
 
 
 
@@ -45,23 +44,24 @@
 			echo ' ';
 		}
 		echo '">'; 
-		echo '<div class="col-md-12 row container element">
+		echo '<div class="col-md-12 row container animate__animated animate__zoomIn anim">
 	<!--Imagen grande-->
 
-	<div class="col-md-4">
-		<img src="'.$consulta['obra'].'" style="height:371px;" class="img-fluid">
+	<div class="col-md-5 col-11 obra-big">
+		<img src="'.$consulta['obra'].'" class="img-fluid">
 	</div>
 	
 	<!--Contenedor de elementos laterales derecho-->
 
-	<div class="col-md-8">
+	<div class="col-md-7 col-12 only-resp">
 		<!--Contenedor de elemntos laterales superior-->
 
-		<div class="row">
+		<div class="row top">
 
 			<!--Primer Cuadro-->
 
-			<div class="col-md-3 bordered first-frame">
+			<div class="col-md-4 col-5 first-frame">
+				<div class="bordered subcontent">
 				<strong>Otras Obras</strong>
 				<ul>';
 
@@ -72,12 +72,14 @@
 				}*/
 				
 				echo '</ul>
+				</div>
 			</div>
 
 			<!--Segundo Cuadro-->
 
-			<div class="col-md-3 second-frame">
-				<img class="img-fluid" style="height:;" src="';
+			<div class="col-md-4 col-5 second-frame ">
+				<div class="bordered">
+				<img class="img-fluid" src="';
 				$var=$consulta['persona'];
 				$queryart=mysqli_query($conexion,"SELECT * FROM artistas WHERE nombre='$var'");
 				if($consultart=mysqli_fetch_array($queryart)){
@@ -85,23 +87,28 @@
 				}
 				echo '"></img>
 			</div>
+			</div>
 			
 			<!--Tercer Cuadro-->
 
-			<div class="col-md-3 bordered third-frame">
-				<strong>Destacados</strong>
-				<ul>
-					<li><a href="">1° Puesto nombre</a></li>
-					<li><a href="">2° Puesto nombre</a></li>
-				</ul>
+			<div class="col-md-4 col-11 third-frame">
+				<div class="bordered subcontent">
+					<strong>Destacados</strong>
+						<ul>
+							<li><a href="">1° Puesto nombre</a></li>
+							<li><a href="">2° Puesto nombre</a></li>
+						</ul>
+				</div>
 			</div>
 		</div>
 
 		<!--Contenedor de elemntos laterales inferior-->
 
-		<div class="col-md-10 bordered bottom">
+		<div class="col-md-12 col-11 bordered bottom">
+			<div class="subcontent">
 			<strong>Biografía / Memoria Conceptual</strong>
 			<p style="margin-top: 10px;">'.$consulta['bio'].'</p>
+			</div>
 		</div>
 
 	</div>
@@ -115,11 +122,12 @@
    
     
   </div>
-  <a class="carousel-control-prev fino" href="#carouselExampleIndicators" role="button" data-slide="prev">
+
+  <a id="prev" class="carousel-control-prev fino" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon colorful" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next fino" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a id="next" class="carousel-control-next fino" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon colorful" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -129,12 +137,14 @@
 
 
 
-
-
-
+<!--div id="load-screen">
+	<img src="img/mva-logo.png" class="img-fluid" id="logo-loader">
+	<div class="lds-facebook"><div></div><div></div><div></div></div>
+</div-->
 
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -7,6 +7,77 @@ html{
 	height: 100%;
 }
 
+body{
+	color:#707070;
+	background-color: #ebebeb;
+}
+
+#load-screen{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	position: fixed;
+	z-index: 20000;
+	top: 0;
+	left: 0;
+}
+
+#logo-loader{
+	margin: 10em auto 0 auto;
+	padding: 3em 3em 0 3em;
+	position: relative;
+	display: block;
+}
+
+.anim{
+	animation-delay: 200;
+	animation-duration: 200;
+}
+
+/*----------------------LOADER-----------------------*/
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: cyan;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+/*----------------------fin del LOADER-----------------------*/
+
+#carouselExampleIndicators{
+	margin-bottom: 50px;
+}
+
 .row{
 	padding: 0; margin: 0;
 }
@@ -16,14 +87,19 @@ html{
 	display: block;
 	width: 39px;
 	height: 100%;
-	position:absolute;
+	position:fixed;
 	left: 0;
 	top: 0;
 	z-index: 2000;
 }
 
+.logo{
+	margin: 30px 0 30px 0;
+}
+
 .bordered{
-	border: 1px solid #707070;
+	border: 0.3px solid #b1b1b1;
+	border-radius:5px;
 	display: block;
 }
 
@@ -35,25 +111,78 @@ ul li a{
 	font-size: 0.75em;
 }
 
-.first-frame , .second-frame{
+.obra-big {
+	padding: 0;
+	max-width: 100%;
+	max-height: 100%;
+
+}
+.obra-big img{
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	border-radius:5px;
+}
+
+/*.first-frame , .second-frame{
 	height: 192px;
 	margin:0 30px 0 0;
-}
+}*/
 
 .second-frame{
 	padding: 0;
+	max-width: 100%;
+	max-height: 100%;
+}
+.second-frame img{
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	border-radius: 5px;
+
 }
 
-.first-frame , .third-frame{
-	padding: 1em;
+.first-frame{
+	padding:0 1em 1em 0;
 }
 
+.second-frame{
+	padding:0 1em 1em 0;
+}
+
+.third-frame{
+	padding:0 0 1em 0;
+}
+
+.second-frame div{
+	height: 100%;
+}
+
+
+.subcontent{
+	padding:1em 3em 3em 3em;
+	height:100%;
+	background-color: #ffffff;
+}
+
+.top{
+	height: 250px;
+}
 .bottom{
-	margin-top:20px;
-	padding: 0.8em;
-	height: 159px;
-	width: 640.5px;
+	/*margin-top:20px;*/
+	padding: 0.7em;
+	height: 300px;
+	width: 100%;
+	max-height: 100%;
+	background-color: #ffffff;
+	overflow-y: hidden;
 }
+
+strong{
+	font-size: 15px;
+}
+
 
 .colorful{
 	/*background-color:green;*/
@@ -64,20 +193,149 @@ ul li a{
 	width: 20px;
 }
 .carousel-control-prev{
-	left: 4%;
+	left: 3%;
 }
 .carousel-control-next{
-	right: 14%;
+	right: 3%;
 }
 
 .carousel{
-	margin-left: 5%;
+	padding:0 5%;
 }
 
-.element{
-	
+.image-modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.7);
+	z-index: 30000;
+	width: 100%;
+	height: 100%;
 }
 
-@media (max-width: ) {
+#prev{
+	border-radius: 5px 0 0 5px;
+}
+
+#next{
+	border-radius: 0 5px 5px 0;
+}
+
+/*----------------------MEDIAQUERIE NOTEBOOK-------------------------------*/
+
+@media (max-width:1366px ) {
 	
+	.bottom{
+		/*margin-top:20px;*/
+		padding: 0.8em;
+		height: 200px;
+		width: 100%;
+		max-height: 100%;
+	}
+	
+	.top{
+		height: 200px;
+	}
+	
+	.carousel-control-prev{
+		left: 3.5%;
+	}
+	
+	.carousel-control-next{
+		right: 3%;	
+	}
+
+}
+
+/*-----------------------MEDIAQUERIE MOVIL---------------------------------*/
+
+@media (max-width:375px) {
+	.bar-left{
+		background-color: #6699CD;
+		display: block;
+		width: 100%;
+		height: 15px;
+		position:fixed;
+		left: 0;
+		top: 0;
+		z-index: 2000;
+
+	}
+	
+	.logo{
+		margin: 20px auto 20px auto;
+	}
+
+	.obra-big {
+		padding: 0;
+		max-width: 100%;
+		max-height: 100%;
+		margin: 0 auto;
+	}
+
+	.obra-big img{
+		width: 100%;
+		height: 300px;
+		margin-bottom: 10px;
+	}
+	
+	.row{
+		margin:0;
+		padding: 0;
+	}
+
+	.only-resp{
+		padding: 0;
+	}
+
+	.first-frame, .second-frame{
+		padding: 0;
+	}
+	
+	.first-frame, .second-frame{
+		width: 150px;
+	}
+
+	.first-frame{
+		margin: 0 auto ;
+	}
+
+	.second-frame{
+		margin: 0 auto ;
+	}
+
+	.third-frame{
+		margin: 10px auto 0 auto;
+		height: 100px;
+	}
+
+	.bottom{
+		padding: 0.8em 0.8em 0 0.8em;
+		height: 200px;
+		width: 100%;
+		margin: 45px auto;
+	}
+
+	#prev , #next{
+		position: fixed;
+		width: 40px;
+		height: 40px;
+		top: 93%;
+	} 
+
+	#prev{
+		left: 38%;
+		border-radius: 5px 0 0 5px;
+
+	}
+
+	#next{
+		right: 38%;
+		border-radius: 0 5px 5px 0;
+	}
+	.subcontent{
+		padding:0 1em 1em 1em;
+		height:100%;
+	}
+
 }
