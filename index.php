@@ -139,9 +139,13 @@
 
 
 
-<div id="load-screen">
+<div id="load-screen"style="display: none;">
 	<img src="img/mva-logo.png" class="img-fluid" id="logo-loader">
-	<div class="lds-facebook"><div></div><div></div><div></div></div>
+	<div class="lds-facebook">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
 </div>
 
 
