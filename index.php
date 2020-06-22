@@ -83,7 +83,9 @@
 				$var=$consulta['persona'];
 				$queryart=mysqli_query($conexion,"SELECT * FROM artistas WHERE nombre='$var'");
 				if($consultart=mysqli_fetch_array($queryart)){
-					echo $consultart['foto'];
+					
+						echo $consultart['foto'];
+					
 				}
 				echo '"></img>
 			</div>
@@ -106,7 +108,7 @@
 
 		<div class="col-md-12 col-11 bordered bottom">
 			<div class="subcontent">
-			<strong>Biografía / Memoria Conceptual</strong>
+			<strong>'.$consulta['title'].'</strong>
 			<p style="margin-top: 10px;">'.$consulta['bio'].'</p>
 			</div>
 		</div>
@@ -137,10 +139,10 @@
 
 
 
-<!--div id="load-screen">
+<div id="load-screen">
 	<img src="img/mva-logo.png" class="img-fluid" id="logo-loader">
 	<div class="lds-facebook"><div></div><div></div><div></div></div>
-</div-->
+</div>
 
 
 <script type="text/javascript" src="js/jquery.js"></script>
