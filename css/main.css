@@ -108,10 +108,11 @@ body{
 
 ul li{
 	list-style: none;
+	margin: 10px 0;
 }
 
 ul li a{
-	font-size: 0.75em;
+	font-size: 16px;
 }
 
 .obra-big {
@@ -182,11 +183,11 @@ ul li a{
 }
 
 strong{
-	font-size:15px;
+	font-size:20px;
 }
 
 p{
-	font-size: 12px;
+	font-size: 16px;
 	font-style: italic;
 }
 
@@ -254,7 +255,15 @@ p{
 		max-width: 512.250px;
 		max-height: 400px;
 	}
+	strong{
+		font-size:15px;
+	}
 
+	ul li a{
+		font-size: 16px;
+	}
+
+	
 }
 
 /*-----------------------MEDIAQUERIE MOVIL---------------------------------*/
@@ -357,5 +366,14 @@ p{
 		padding:0 1em 1em 1em;
 		height:100%;
 	}
+	ul li a{
+		font-size: 12px;
+	}
+	
+	ul li{
+		list-style: none;
+		margin: 2px 0;
+	}
+
 
 }
