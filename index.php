@@ -62,16 +62,15 @@
 
 			<div class="col-md-4 col-5 first-frame">
 				<div class="bordered subcontent">
-				<strong>Otras Obras</strong>
-				<ul>';
-
-				/*$request2="SELECT * FROM otras_obras WHERE id_obra='$consulta['id']'";
-				while($consulta2=mysqli_fetch_array($request2))
-				{
-					//echo '<li><a href="'.$consulta2['path'].'">'.$consulta2['nombre de obra'].'</a></li>';
-				}*/
-				
-				echo '</ul>
+				<strong>Destacados</strong>
+						<ul>
+							<li><button type="button" class="text-primary linked" data-toggle="modal" data-target="#exampleModal1">
+  									1º Puesto
+								</button></li>
+							<li><button type="button" class="text-primary linked" data-toggle="modal" data-target="#exampleModal2">
+  									2º Puesto
+								</button></li>
+						</ul>
 				</div>
 			</div>
 
@@ -79,6 +78,7 @@
 
 			<div class="col-md-4 col-5 second-frame ">
 				<div class="bordered">
+				<div>
 				<img class="img-fluid" src="';
 				$var=$consulta['persona'];
 				$queryart=mysqli_query($conexion,"SELECT * FROM artistas WHERE nombre='$var'");
@@ -86,22 +86,22 @@
 					
 						echo $consultart['foto'];
 					
-				}
-				echo '"></img>
-			</div>
+				
+				echo '"></img><div><span class="nombre text-center">';
+				echo $consultart['nombre'].'</span></div>';
+					}
+				echo '</div>
+			</div>	
+			
 			</div>
 			
 			<!--Tercer Cuadro-->
 
-			<div class="col-md-4 col-11 third-frame">
+			<!--div class="col-md-4 col-11 third-frame">
 				<div class="bordered subcontent">
-					<strong>Destacados</strong>
-						<ul>
-							<li><a href="">1° Puesto nombre</a></li>
-							<li><a href="">2° Puesto nombre</a></li>
-						</ul>
+					
 				</div>
-			</div>
+			</div-->
 		</div>
 
 		<!--Contenedor de elemntos laterales inferior-->
@@ -134,6 +134,57 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+
+
+
+<!-- Modal UNO-->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content col-md-10">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Gota del Desierto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="img/gotadeagua.JPG" class="img-fluid radiuses">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Modal DOS -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Huella Humana</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="img/lahuellahumana.jpg" class="img-fluid radiuses">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 
