@@ -62,15 +62,11 @@
 
 			<div class="col-md-4 col-5 first-frame">
 				<div class="bordered subcontent">
-				<strong>Destacados</strong>
-						<ul>
-							<li><button type="button" class="text-primary linked" data-toggle="modal" data-target="#exampleModal1">
-  									1º Puesto
-								</button></li>
-							<li><button type="button" class="text-primary linked" data-toggle="modal" data-target="#exampleModal2">
-  									2º Puesto
-								</button></li>
-						</ul>
+				<strong>Artista</strong>
+				<br>
+						
+							'.$consulta['persona'].'
+						
 				</div>
 			</div>
 
@@ -87,8 +83,7 @@
 						echo $consultart['foto'];
 					
 				
-				echo '"></img><div><span class="nombre text-center">';
-				echo $consultart['nombre'].'</span></div>';
+				echo '"></img>';
 					}
 				echo '</div>
 			</div>	
